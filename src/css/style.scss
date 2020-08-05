@@ -1,0 +1,33 @@
+@use 'reset';
+
+/*  ========= container-geral ========= */
+.container-geral {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    ;
+}
+
+/*  ========= header ========= */
+
+.header {
+    grid-area: header;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    .logo {
+        width: 290px;
+        text-align: left;
+    }
+
+    .nome-container {
+        font-size: 1em;
+        .artur {
+            font-family: 'Lemonada', cursive;
+        }
+
+    }
+}

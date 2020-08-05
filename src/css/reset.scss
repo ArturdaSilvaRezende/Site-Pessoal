@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@515&display=swap');
+
+@mixin borderRadiusGlobal($property) {
+    -webkit-border-box: $property;
+    -moz-border-box: $property;
+    -ms-border-box: $property;
+    -o-border-box: $property;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
+    outline: none;
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+	@include borderRadiusGlobal(5px);
+}
