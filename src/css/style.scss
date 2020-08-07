@@ -1,33 +1,223 @@
 @use 'reset';
+@use 'mixin-variaveis';
+
+$blue: #003d8e;
+$pink: #e83e8c;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+%active {
+    border-bottom: 2px solid #ffc107;
+}
 
 /*  ========= container-geral ========= */
 .container-geral {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-    "header header header"
-    ;
+    "header header header";
 }
 
+@media (max-width: 760px) {
+    .container-geral {
+        grid-template-columns: 100%;
+    }
+    .container-geral {
+        grid-template-areas: 
+        "header";
+    }
+}
 /*  ========= header ========= */
-
 .header {
     grid-area: header;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 1fr auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: $light;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
 
     .logo {
-        width: 290px;
-        text-align: left;
-    }
-
-    .nome-container {
-        font-size: 1em;
-        .artur {
-            font-family: 'Lemonada', cursive;
+        width: 380px;
+        display: flex;
+        
+        img {
+            width: 100px;
         }
 
+        .nome-container {
+            margin-top: 5px;
+            text-align: left;
+
+            .artur {
+                color: $blue;
+                font-family: 'Lemonada', cursive;
+                font-size: 1.2em;
+
+                span {
+                    color: $yellow;
+                    font-family: 'Lemonada', cursive;
+                }
+            }
+
+            .front-end {
+                color: $blue;
+                font-weight: bold;
+                margin-top: -12px;
+            }
+    
+        }
+    }
+
+    .nav-main {
+
+        .menu-header {
+            display: flex;
+    
+            li + li {
+                margin-left: 20px;
+            }
+    
+            a {
+                color: $blue;
+                font-weight: 500;
+                font-size: 1.1em;
+                transition: 0.3s ease-in;
+                &:hover {
+                    color: $yellow;
+                }
+            }
+    
+            .active {
+                @extend %active;
+            }
+        }
+    }
+
+    .data-agora {
+        width: 220px;
+        span {
+            color: $blue;
+            font-family: 'Vollkorn', serif;
+            font-weight: 500;
+            font-size: 1em;
+        }
+    }
+
+    .btn-show-menu {
+        display: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-close-menu {
+        display: none;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    
+    
+    @media (max-width: 1030px) {
+        .nav-main {
+            position: absolute;
+            top: 105px;
+            right: -54%;
+            width: 50%;
+          
+          
+            .menu-header {
+                
+                flex-direction: column;
+                text-align: center;
+                background-color: $dark;
+                width: 50%;
+                padding: 10px;
+                width: 100%;
+                li + li {
+                    margin-top: 20px;
+                    margin-left: 0;
+                }
+
+                a {
+                    color: $light;
+                }
+            }
+
+            .btn-close-menu {
+                display: block;
+                position: absolute;
+                top: -5px;
+                left: -10px;
+            }
+        }
+
+        .data-agora {
+            margin-right: 10%;
+        }
+
+        .btn-show-menu {
+            display: block;
+        }
+    }
+
+    @media (min-width: 300px) and (max-width: 645px) {
+        .logo {
+            width: 100%;
+            margin: 20px auto 0 auto;
+            img {
+                width: 60px;
+            }
+            .nome-container {
+                margin-top: -12px;
+                .artur {
+                    margin-top: 10px;
+                    font-size: 16px;
+                }
+                .front-end {
+                    font-size: 14px;
+                    margin-top: -5px;
+                }
+            }
+        }
+        .data-agora {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 12px;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        .btn-show-menu {
+            display: block;
+            margin-bottom: -27px;
+        }
     }
 }
+
+
+
+
+
+
+

@@ -5,7 +5,6 @@ const webpack = require('webpack');
 
 module.exports = {
 	entry: './src/js/index.js',
-	entry: './src/js/arquivos.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'main.js'
@@ -15,7 +14,10 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(sa|sc|c)ss$/,
-				use: [MiniCssExtractPlugin.loader,'css-loader','sass-loader']
+				use: [MiniCssExtractPlugin.loader,'css-loader','sass-loader'],
+				include: [
+					path.resolve(__dirname, 'src/css')
+				]
 			},
 			{
 				test: /\.css$/,
@@ -29,7 +31,10 @@ module.exports = {
 					options: {
 						presets: ['@babel/preset-env']
 					}
-				}
+				},
+				include: [
+					path.resolve(__dirname, 'src/js')
+				]
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
@@ -49,3 +54,4 @@ module.exports = {
 		new webpack.SourceMapDevToolPlugin({})
 	]
 }
+

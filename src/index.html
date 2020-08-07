@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <title>Artur da Silva Rezende</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Análista de Sistema recém formado em busca do primeiro emprego na área.">
-    <meta name="keywords" content="Desenvolvilmento, desenvolvedor front end, html5, css3, sass, javascript, bootstrap, jquert, phpoo, mysql, git">
+    <meta name="keywords"
+        content="Desenvolvilmento, desenvolvedor front end, html5, css3, sass, javascript, bootstrap, jquert, phpoo, mysql, git">
     <meta name="author" content="Artur da Silva Rezende">
     <meta name="robots" content="index, follow">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.png" />
- 
+
 </head>
+
 <body>
     <div class="container-geral">
-
 
         <header class="header">
             <a href="index.html" class="logo">
 
-                <p class="nome-container">
-                    <span class="artur">Artur</span>
-                    <span class="rezende">Rezende</span>
-                </p>
+                <img src="logo.png" alt="logo-artur">
 
-                <p>Desenvolvedor Front-End</p>
-            </a>
+                <div class="nome-container">
+                    <p class="artur">Artur<span class="rezende">Rezende</span></p>
+                    <p class="front-end">Desenvolvedor Front-End</p>
+                </div>
 
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Portifólio</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
+            </a><!-- logo -->
+
+            <div class="data-agora">
+                <span class="msg-dia"></span>
+                <span class="hora-atual"></span>
+                <span class="show-data-hora"></span>
+            </div><!-- full data -->
+
+            <nav class="nav-main">
+
+                <ul class="menu-header">
+                    <li><a class="active" href="">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Portifólio</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+
+                <button class="btn-close-menu">
+                    <img src="close.png" alt="btn-close-menu">
+                </button>
+
+            </nav><!-- navigation menu -->
+
+            <button class="btn-show-menu">
+                <img src="open-menu.png" alt="btn-show-menu">
+            </button>
+            
         </header>
 
     </div><!-- wapper -->
+
 </body>
+
 </html>

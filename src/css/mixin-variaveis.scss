@@ -1,0 +1,37 @@
+@mixin borderRadiusGlobal($property) {
+    -webkit-border-box: $property;
+    -moz-border-box: $property;
+    -ms-border-box: $property;
+    -o-border-box: $property;
+}
+
+/*  ===== animation header  ===== */
+//show
+@keyframes show-menu {
+    from {
+        right: -54%;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.animation-menu-show {
+    animation: show-menu 1s ease;
+}
+
+//hide
+@keyframes hide-menu {
+    from {
+        right: 0px;
+    }
+
+    to {
+        right: -54%;
+    }
+}
+
+.animation-menu-hide {
+    animation: hide-menu 1s ease;
+}
