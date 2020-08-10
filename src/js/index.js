@@ -15,33 +15,34 @@ import { rotas } from './rotas'
     const dayName = new Array("domingo ", "segunda-feira ", "terça-feira ", "quarta-feira ", "quinta-feira ", "sexta-feira ", "sábado ")
     const monName = new Array("janeiro ", "fevereiro ", "março ", "abril ", "maio ", "junho ", "agosto ", "outubro ", "novembro ", "dezembro ")
 
-    setInterval(showDataHora());
+   const control_time = setInterval(showDataHora, 500);
 
     function showDataHora() {
         const data = new Date()
         const hour = data.getHours()
         const minutes = ("0" + data.getMinutes()).slice(-2)
+        const secound = ("0" + data.getSeconds()).slice(-2)
 
         msgDia.style.fontFamily = "arial";
         messenger.style.fontFamily = "arial";
 
         if (hour >= 5 && hour < 12) {
-            msgDia.innerHTML = "Bom Dia, " + dayName[data.getDay()] + data.getDate() + " " + "de " + monName[data.getMonth()] + "de " + data.getFullYear();
-            messenger.innerHTML = `Agora são ${hour}:${minutes}`;
+            msgDia.innerHTML = "Bom dia, " + dayName[data.getDay()] + data.getDate() + " " + "de " + monName[data.getMonth()] + "de " + data.getFullYear();
+            messenger.innerHTML = ` - ${hour}:${minutes}:${secound}`;
 
         } else if (hour >= 12 && hour < 18) {
-            msgDia.innerHTML = "Boa Tarde, " + dayName[data.getDay()] + data.getDate() + " " + "de " + monName[data.getMonth()] + "de " + data.getFullYear();
-            messenger.innerHTML = ` - ${hour}:${minutes}`;
+            msgDia.innerHTML = "Boa tarde, " + dayName[data.getDay()] + data.getDate() + " " + "de " + monName[data.getMonth()] + "de " + data.getFullYear();
+            messenger.innerHTML = ` - ${hour}:${minutes}:${secound}`;
         } else {
-            msgDia.innerHTML = "Boa Noite, " + dayName[data.getDay()] + data.getDate() + " " + "de " + monName[data.getMonth()] + "de " + data.getFullYear();
-            messenger.innerHTML = ` - ${hour}:${minutes}`;
+            msgDia.innerHTML = "Boa noite, " + dayName[data.getDay()] + data.getDate() + " " + "de " + monName[data.getMonth()] + "de " + data.getFullYear();
+            messenger.innerHTML = ` - ${hour}:${minutes}:${secound}`;
         }
+
     }
 
 })();
 
 //A estrutura abaixo faz o controle do show e hide do menu de navegação
-
 (() => {
 
     const menuHeader = document.querySelector('.nav-main')
@@ -62,6 +63,29 @@ import { rotas } from './rotas'
     function hideMenu() {
         menuHeader.style.right = '-54%'
         menuHeader.classList.add('animation-menu-hide')
+    }
+
+})();
+
+//A estrutura abaixo faz o controle da animação (typewrite)
+(()=> {
+
+    const titleApresentation = document.querySelector('.full-name')
+    setInterval(()=> {
+        typeWriter(titleApresentation);
+    }, 7000);
+
+    function typeWriter(element) {
+        const textAarray = element.innerHTML .split('');
+        element.innerHTML = '';
+
+        textAarray.forEach((letra, i) => {
+
+            setTimeout(() => {
+                element.innerHTML += letra;
+            }, 80 * i)
+
+        });
     }
 
 })();

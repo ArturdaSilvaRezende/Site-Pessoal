@@ -10,6 +10,16 @@
     font-size: 100%;
 }
 
+::selection {
+    background-color: rgba(17, 196, 196, 0.4);
+}
+
+body {
+    background: url('../assets/bg-site.png') no-repeat 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 a {
     text-decoration: none;
 }
