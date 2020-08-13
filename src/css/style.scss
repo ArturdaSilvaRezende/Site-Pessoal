@@ -1,39 +1,5 @@
-@use 'reset';
-@use 'mixin-variaveis';
-
-/*  ========= extends e variáveis ========= */
-
-$blue: #003d8e;
-$pink: #e83e8c;
-$indigo: #6610f2;
-$purple: #6f42c1;
-$red: #dc3545;
-$orange: #fd7e14;
-$yellow: #ffc107;
-$green: #28a745;
-$teal: #20c997;
-$cyan: #17a2b8;
-$white: #fff;
-$gray: #6c757d;
-$gray-dark: #343a40;
-$primary: #007bff;
-$secondary: #6c757d;
-$success: #28a745;
-$info: #17a2b8;
-$warning: #ffc107;
-$danger: #dc3545;
-$light: #f8f9fa;
-$dark: #343a40;
-
-%text-gradient {
-    background: radial-gradient(ellipse at center, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-%active {
-    border-bottom: 2px solid #ffc107;
-}
+@import 'reset';
+@import 'mixin-variaveis';
 
 /*  ========= container-geral ========= */
 .container-geral {
@@ -51,22 +17,27 @@ $dark: #343a40;
     .container-geral {
         grid-template-areas: 
         "header"
-        "main-content ";
+        "main-content";
     }
 }
 
 /*  ========= header ========= */
 .header {
     grid-area: header;
-    padding: 10px 20px;
     display: flex;
+    @extend %display-flex;
+    @extend %jusfify-content;
+    @extend %align-items;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
     position: fixed;
     width: 100%;
-    background-color: rgba(14, 133, 180, 0.1);
+    background-color: rgba(0,0,0,0.9);
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(250, 246, 246, 0.1);
     box-shadow: 0px 0px 5px 5px rgba(250, 246, 246, 0.1);
-    
+    z-index: 999;
+
     .logo {
         width: 320px;
         display: flex;
@@ -100,10 +71,12 @@ $dark: #343a40;
     }
 
     .nav-main {
-
+       
         .menu-header {
+
             display: flex;
-    
+            @extend %display-flex;
+
             li + li {
                 margin-left: 20px;
             }
@@ -113,6 +86,9 @@ $dark: #343a40;
                 font-weight: 500;
                 font-size: 1.1em;
                 transition: 0.3s ease-in;
+                -webkit-transition: 0.3s ease-in;
+                -o-transition: 0.3s ease-in;
+
                 &:hover {
                     color: $yellow;
                 }
@@ -152,19 +128,18 @@ $dark: #343a40;
     @media (max-width: 1070px) {
         .nav-main {
             position: absolute;
-            top: 105px;
+            top: 90px;
             right: -54%;
             width: 50%;
-          
-          
-            .menu-header {
-                
+           
+            .menu-header {  
                 flex-direction: column;
                 text-align: center;
                 background-color: #000;
                 width: 50%;
                 padding: 10px;
                 width: 100%;
+                
                 li + li {
                     margin-top: 20px;
                     margin-left: 0;
@@ -194,6 +169,11 @@ $dark: #343a40;
     }
 
     @media (min-width: 300px) and (max-width: 645px) {
+
+        .nav-main {
+            top: 110px;
+        }
+
         .logo {
             width: 100%;
             margin: 20px auto 0 auto;
@@ -212,6 +192,7 @@ $dark: #343a40;
                 }
             }
         }
+
         .data-agora {
             position: absolute;
             top: 5px;
@@ -221,6 +202,7 @@ $dark: #343a40;
             display: block;
             text-align: center;
         }
+
         .btn-show-menu {
             display: block;
             margin-bottom: -27px;
@@ -234,7 +216,13 @@ $dark: #343a40;
 
     /* apresentation */
     .apresentation {
-        margin-top: 13%;
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include p-absolut-center(-50%, -50%);
+        width: 100%;
+     
         .full-name {
             color: $light;
             text-align: center;
@@ -254,11 +242,11 @@ $dark: #343a40;
             }
         }
     }
-
     @media screen and (max-width: 760px) {
         .apresentation {
-            margin-top: 35%;
-            padding: 10px;
+
+            top: 250px;
+
             .full-name {
                 width: 100%;
                 font-size: 1.4em;
@@ -266,11 +254,98 @@ $dark: #343a40;
             }
             .skills-basic {
                 margin: 20px auto;
-                width: 80%;
+                width: 85%;
             }
         }
     }
+    @media screen and (min-width: 761px) and (max-width: 992px) {
+        .apresentation {
+            top: 220px;
+        }
+    }
 
+    /* about */
+    .about {
+
+        width: 100%;
+        background-color: rgba(0,0,0,0.8);
+        margin-top: 400px;
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 20% auto 0 auto;
+            padding: 20px;
+
+            .about-text {
+                width: 90%;
+                padding-right: 30px;
+                text-align: center;
+                margin: 0 auto;
+
+                h1 {
+                    color: $yellow;
+                    font-size: 1.3em;
+                }
+    
+                p {
+                    color: $light;
+                    margin-top: 20px;
+                    font-size: 15px;
+                    text-align: justify;
+                    text-indent: 30px;
+                    span {
+                        color: $yellow;
+                    }
+                }
+            }
+    
+            .img-artur-rezende {
+                padding-top: 20px;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                    display: block;
+                    @include borderRadiusGlobal(20px);
+                    box-shadow: 0 0 10px 2px $light;
+                }
+            }
+
+        }
+        
+    }
+    @media screen and (max-width: 900px){
+
+        .about {
+            
+            .about-container {
+                grid-template-areas: "about-text" "img-artur-rezende";
+                grid-template-columns: 100%;
+
+                .about-text {
+                    grid-area: img-artur-rezende;
+                    p {
+                       width: 100%;
+                       margin-left: 20px;
+                    }
+                }
+
+                .img-artur-rezende {
+                    grid-area: about-text;
+                    padding-bottom: 20px;
+                    max-width: 300px;
+                    margin: 0 auto;
+                }
+            }
+            
+        }
+
+    }
+    @media screen and (min-width: 901px) and (max-width: 1200px) {
+        .about {
+            margin-top: 400px;
+        }
+    }
 }
 
 

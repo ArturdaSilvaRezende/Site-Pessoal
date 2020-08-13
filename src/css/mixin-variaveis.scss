@@ -1,11 +1,76 @@
+/* Variáveis */
+$blue: #003d8e;
+$pink: #e83e8c;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+/* ========== Mixins ========== */
 @mixin borderRadiusGlobal($property) {
-    -webkit-border-box: $property;
-    -moz-border-box: $property;
-    -ms-border-box: $property;
-    -o-border-box: $property;
+    -webkit-border-radius: $property;
+    -moz-border-radius: $property;
+    -ms-border-radius: $property;
+    -o-border-radius: $property;
+    border-radius: $property;
+}
+
+@mixin p-absolut-center($x,$y) {
+    -webkit-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    transform: translate($x,$y);    
+}
+
+/* ========== Extends ========== */
+%text-gradient {
+    background: radial-gradient(ellipse at center, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* display flex prefixo */
+%display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+
+%jusfify-content {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+%align-items {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+/* ========== actives ========== */
+
+%active {
+    border-bottom: 2px solid #ffc107;
 }
 
 /*  ===== animation header  ===== */
+
 //show
 @keyframes show-menu {
     from {

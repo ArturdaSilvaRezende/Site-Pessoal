@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -9,15 +10,24 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'main.js'
 	},
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin({
+				test: /\.js(\?.*)?$/i,
+			}),
+		] 
+	},
 	devtool: false,
+	devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9000
+    },
 	module: {
 		rules: [
 			{
 				test: /\.(sa|sc|c)ss$/,
-				use: [MiniCssExtractPlugin.loader,'css-loader','sass-loader'],
-				include: [
-					path.resolve(__dirname, 'src/css')
-				]
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
 			},
 			{
 				test: /\.css$/,
@@ -31,15 +41,12 @@ module.exports = {
 					options: {
 						presets: ['@babel/preset-env']
 					}
-				},
-				include: [
-					path.resolve(__dirname, 'src/js')
-				]
+				}
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				loader: 'file-loader',
-				options:{name:'[name].[ext]'}
+				options: { name: '[name].[ext]' }
 			}
 		]
 	},

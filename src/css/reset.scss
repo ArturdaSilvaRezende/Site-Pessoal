@@ -11,11 +11,12 @@
 }
 
 ::selection {
-    background-color: rgba(17, 196, 196, 0.4);
+    background-color: yellow;
+    color: #000;
 }
 
 body {
-    background: url('../assets/bg-site.png') no-repeat 100% 100%;
+    background: url('../assets/bg-site.jpg') no-repeat 100% 100%;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -31,4 +32,15 @@ li {
 img {
 	display: block;
 	width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    
+    body {
+        background: url('../assets/bg-site.jpg') no-repeat 100% 100%;
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size: cover;
+    }
 }
