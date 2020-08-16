@@ -275,10 +275,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             margin: 20% auto 0 auto;
-            padding: 20px;
+            padding: 30px;
 
             .about-text {
-                width: 90%;
+                width: 100%;
                 padding-right: 30px;
                 text-align: center;
                 margin: 0 auto;
@@ -303,6 +303,7 @@
             .img-artur-rezende {
                 padding-top: 20px;
                 margin: 0 auto;
+                
                 img {
                     width: 100%;
                     display: block;
@@ -314,6 +315,7 @@
         }
         
     }
+
     @media screen and (max-width: 900px){
 
         .about {
@@ -345,6 +347,115 @@
         .about {
             margin-top: 400px;
         }
+    }
+
+    /* skills front end */
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 15px;
+        padding: 15px;
+        margin: 4% auto 0 auto;
+        width: 1200px;
+
+        .title-skills {
+            grid-column: 1/-1;
+            text-align: center;
+            justify-content: space-between;
+            color: $light;
+            padding-bottom: 2%;
+            font-size: 1.5em;
+        }
+
+        .skills-card {
+            box-shadow: 0px 4px 4px 0 rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            padding: 20px;
+            width: 90%;
+            @include borderRadiusGlobal(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(0,0,0,0.4);
+
+            &:hover {
+                box-shadow: 4px 4px 8px 0 rgba(255, 255, 255, 0.2);
+            }
+
+            img {
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            .content-skill {
+                h1, p {
+                    color: $light;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 901px) and (max-width: 1200px) {
+        .skills {
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            width: 100%;
+
+            .title-skills {
+                font-size: 1.3em;
+            }
+
+            .skills-card {
+                width: 100%;
+
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 651px) and (max-width: 900px) {
+        
+        .skills {
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            width: 100%;
+
+            .title-skills {
+                font-size: 1.1em;
+            }
+
+            .skills-card {
+                width: 80%;
+                margin: 0 auto;
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 650px) {
+
+        .skills {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            width: 100%;    
+            gap: 25px;
+            .title-skills {
+                font-size: 1rem;
+            }
+
+            .skills-card {
+                width: 80%;
+                margin: 0 auto;
+                img {
+                    width: 70%;
+                }
+            }
+        }
+
     }
 }
 
