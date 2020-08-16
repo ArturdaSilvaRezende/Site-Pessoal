@@ -100,3 +100,35 @@ $dark: #343a40;
 .animation-menu-hide {
     animation: hide-menu 1s ease;
 }
+
+/*  ===== animation java message  ===== */
+
+//show
+@keyframes showMenssage {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.show-java-menssage {
+    animation: showMenssage 1s ease;
+}
+
+//hide
+@keyframes hideMenssage {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.hide-java-menssage {
+    animation: hideMenssage 1s ease;
+}
