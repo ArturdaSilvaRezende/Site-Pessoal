@@ -25,4 +25,7 @@ import '../assets/webpack.png';
 import '../assets/php.png';
 import '../assets/mysql.png';
 import '../assets/git.png';
+<<<<<<< HEAD
 import '../assets/java.png';
+=======
+>>>>>>> bc5059baab41d6adf6e2117294bfd73e9a6d0cea
