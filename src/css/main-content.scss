@@ -1,4 +1,5 @@
 @import 'mixin-variaveis';
+@import 'container-geral';
 
 /*  ========= main-content ========= */
 .main-content {
@@ -72,7 +73,7 @@
                 padding-right: 30px;
                 text-align: center;
                 margin: 0 auto;
-
+               
                 h1 {
                     color: $yellow;
                     font-size: 1.3em;
@@ -206,7 +207,7 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #000;
+            background-color: #fff;
             padding: 20px;
             @include borderRadiusGlobal(20px);
             width: 80%;
@@ -214,7 +215,8 @@
 
              p {
                  text-indent: 30px;
-                 color: $light;
+                 color: $dark;
+                 font-weight: 700;
                  text-align: justify;
              }
 
@@ -271,7 +273,7 @@
         }
     }
 
-    @media screen and (min-width: 300px) and (max-width: 650px) {
+    @media screen and (max-width: 650px) {
 
         .skills {
             grid-template-columns: 1fr;
@@ -298,8 +300,9 @@
             }
 
             .java-menssage {
-                bottom: -10%;
+                bottom: -14%;
                 width: 85%;
+                z-index: 999;
             }
         }
 

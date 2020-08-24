@@ -1,3 +1,5 @@
+@import '../css/icofont/icofont.min.css';
+
 /* Variáveis */
 $blue: #003d8e;
 $pink: #e83e8c;
@@ -114,7 +116,7 @@ $dark: #343a40;
     }
 }
 
-.show-java-menssage {
+.show-menssage {
     animation: showMenssage 1s ease;
 }
 
@@ -129,6 +131,6 @@ $dark: #343a40;
     }
 }
 
-.hide-java-menssage {
+.hide-menssage {
     animation: hideMenssage 1s ease;
 }

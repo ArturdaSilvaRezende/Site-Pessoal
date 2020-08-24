@@ -1,0 +1,148 @@
+@import 'mixin-variaveis';
+@import 'container-geral';
+
+.portifolio {
+    grid-area: portifolio;
+    background-color: rgba(0,0,0,0.8);
+    padding: 3% 0 3% 0;
+   
+    .title {
+        color: $light;
+        text-align: center;
+        font-size: 2.8em;
+        text-shadow: 0 0 10px $light;
+        margin-bottom: 20px;
+    }
+
+    .portifolio-container {
+        display: flex;
+        @extend %display-flex;
+        @extend %jusfify-content;
+        @extend %align-items;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 960px;
+        margin: 0 auto;
+        
+        .portifolio-item {
+            position: relative;
+            @include borderRadiusGlobal(15px);
+            margin-bottom: 20px;
+
+            img {
+                @include borderRadiusGlobal(15px);
+            }
+
+            figcaption {
+                color: $light;
+                display: flex;
+                justify-content: space-evenly;
+                text-align: center;
+                padding-top: 20px;
+                
+                .container-buttons {
+
+                    i {
+                        color: $light;
+                        font-size: 1.2em;
+                        margin-left: 5px;
+                        transition: 0.4s ease-in;
+
+                        &:hover {
+                            color: $yellow;
+                        }
+
+                        span {
+                            padding-left: 5px;
+                        }
+                    }
+                    
+                }
+
+                .description-portifolio {
+                    background-color: rgba(0,0,0,0.9);
+                    @include borderRadiusGlobal(15px);
+                    height: 91%;
+                    position: absolute;
+                    top: 0;
+                    display: none;
+                    font-size: 14px;
+                    padding: 0 20px;
+
+                    button {
+
+                        position: relative;
+                        top: 80px;
+
+                        i {
+                            color: $light;
+                            transition: 0.4s ease-in;
+
+                            &:hover {
+                                color: $yellow;
+                            }
+    
+                            span {
+                                padding-left: 5px;
+                            }
+                        }
+                    }
+
+                    p {
+                       position: relative;
+                       top: 100px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    @media (max-width: 768px) {
+
+        .title {
+            font-size: 1.5em;
+        }
+        .portifolio-container {
+            width: 100%;
+            flex-direction: column;
+            
+        .portifolio-item {
+            
+            figcaption {
+                flex-direction: column;
+
+                .container-buttons {
+                    button {
+                        margin-bottom: 20px;
+                        font-size: 12px;
+                    }
+                }
+
+                .description-portifolio {
+
+                    button {
+                        top: 40px;
+                    }
+
+                    p {
+                        top: 50px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            img {
+                margin: 0 auto;
+                width: 80%;
+                display: block;
+            }
+        }
+
+        }
+
+    }
+
+}

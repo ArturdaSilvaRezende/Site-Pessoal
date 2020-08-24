@@ -11,13 +11,13 @@
     
     function showMessage(){
         javaMenssage.style.display = 'block'
-        javaMenssage.classList.add('show-java-menssage')
-        javaMenssage.classList.remove('hide-java-menssage');
+        javaMenssage.classList.add('show-menssage')
+        javaMenssage.classList.remove('hide-menssage');
     }
 
     function hideMenu() {
         
-        javaMenssage.classList.add('hide-java-menssage')
+        javaMenssage.classList.add('hide-menssage')
         
         setTimeout(()=> {
             javaMenssage.style.display = 'none'

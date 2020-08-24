@@ -2,8 +2,11 @@
 import '../css/style.scss';
 import '../css/reset.scss';
 import '../css/mixin-variaveis.scss';
+import '../css/container-geral.scss';
 import '../css/header.scss';
 import '../css/main-content.scss';
+import '../css/portifolio.scss';
+
 
 //header image
 import '../assets/favicon.png'; //favicon
@@ -26,3 +29,9 @@ import '../assets/php.png';
 import '../assets/mysql.png';
 import '../assets/git.png';
 import '../assets/java.png';
+
+//Portifólio
+import '../assets/portifolio-01.jpg';
+import '../assets/portifolio-02.jpg';
+import '../assets/portifolio-03.jpg';
+import '../assets/portifolio-04.jpg';

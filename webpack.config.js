@@ -42,6 +42,15 @@ module.exports = {
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				loader: 'file-loader',
 				options: { name: '[name].[ext]' }
+			},
+			{
+				test: /\.(eot|svg|ttf|woff|woff2?)$/,
+                use: {
+					loader: 'file-loader', 
+					options: {
+                        name: '../css/icofont/fonts/[name]-[hash:8].[ext]'
+                    }
+                }
 			}
 		]
 	},

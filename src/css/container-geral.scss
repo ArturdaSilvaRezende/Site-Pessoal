@@ -1,0 +1,20 @@
+.container-geral {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "main-content main-content main-content"
+    "portifolio portifolio portifolio";
+}
+
+@media (max-width: 767px) {
+    .container-geral {
+        grid-template-columns: 100%;
+    }
+    .container-geral {
+        grid-template-areas: 
+        "header"
+        "main-content"
+        "portifolio";
+    }
+}
