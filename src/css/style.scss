@@ -4,26 +4,11 @@
 /* arquivos do projeto */
 @import 'header';
 @import 'main-content';
+@import 'portifolio';
+@import 'footer';
 
-/*  ========= container-geral ========= */
-.container-geral {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "header header header"
-    "main-content main-content main-content";
-}
 
-@media (max-width: 760px) {
-    .container-geral {
-        grid-template-columns: 100%;
-    }
-    .container-geral {
-        grid-template-areas: 
-        "header"
-        "main-content";
-    }
-}
+
 
 
 

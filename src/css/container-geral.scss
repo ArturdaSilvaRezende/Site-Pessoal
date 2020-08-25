@@ -4,7 +4,10 @@
     grid-template-areas: 
     "header header header"
     "main-content main-content main-content"
-    "portifolio portifolio portifolio";
+    "portifolio portifolio portifolio"
+    "footer footer footer";
+    gap: 30px;
+
 }
 
 @media (max-width: 767px) {
@@ -15,6 +18,7 @@
         grid-template-areas: 
         "header"
         "main-content"
-        "portifolio";
+        "portifolio"
+        "footer";
     }
 }

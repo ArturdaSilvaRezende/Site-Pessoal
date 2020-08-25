@@ -7,7 +7,6 @@ import '../css/header.scss';
 import '../css/main-content.scss';
 import '../css/portifolio.scss';
 
-
 //header image
 import '../assets/favicon.png'; //favicon
 import '../assets/logo.png'; //logo
@@ -35,3 +34,9 @@ import '../assets/portifolio-01.jpg';
 import '../assets/portifolio-02.jpg';
 import '../assets/portifolio-03.jpg';
 import '../assets/portifolio-04.jpg';
+
+//Contanto
+import '../assets/gmail.png';
+import '../assets/linkedin.png';
+import '../assets/github.png';
+import '../assets/whatsapp.png';

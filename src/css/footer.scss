@@ -1,0 +1,109 @@
+@import 'mixin-variaveis';
+@import 'container-geral';
+
+.footer {
+    grid-area: footer;
+    margin-top: 15px;
+
+    .title-footer {
+        color: $light;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @extend %display-flex;
+        @extend %jusfify-content;
+        @extend %align-items;
+        width: 960px; 
+        margin: 5% auto;
+
+        .contato-item {
+
+            display: flex;
+            align-items: center;
+            @extend %display-flex;
+            @extend %jusfify-content;
+            @extend %align-items;
+
+            img {
+                width: 50%;
+                display: block;
+            }
+
+            .github-img {
+                @include borderRadiusGlobal(10px);
+            }
+
+            figcaption {
+                
+                color: $light;
+                margin-left: 10px;
+                width: 100%;
+                
+                p {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                a {
+                    color: $light;
+                    transition: 0.4s ease-in;
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 992px) {
+
+        .footer-content {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            
+            .contato-item {
+
+                width: 200px;
+                margin: 3% auto;
+
+                img {
+                    width: 50%;
+                }
+
+            }
+        }
+
+    }
+
+    @media (max-width: 630px) {
+
+        .footer-content {
+
+            display: grid;
+            grid-template-columns: 100%;
+            width: 100%;
+           
+            .contato-item {
+
+                width: 80%;
+
+                img {
+                    width: 50%;
+                }
+
+                &:last-child {
+                    padding-bottom: 10%;
+                }
+
+            }
+        }
+
+    }
+}
