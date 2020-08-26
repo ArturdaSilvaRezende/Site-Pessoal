@@ -6,6 +6,7 @@ import '../css/container-geral.scss';
 import '../css/header.scss';
 import '../css/main-content.scss';
 import '../css/portifolio.scss';
+import '../css/area-contato.scss';
 
 //header image
 import '../assets/favicon.png'; //favicon

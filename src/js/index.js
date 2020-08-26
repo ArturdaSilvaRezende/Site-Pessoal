@@ -11,7 +11,7 @@ import { fullDataTime } from './full_data_time'
 import { tipeWrite } from './tipewrite'
 import { javaMessage } from './java_skill_control'
 import { portifolioContent } from './portifolio'
-
+import { navegacaoLinks } from './navegacao-link'
 
 
 

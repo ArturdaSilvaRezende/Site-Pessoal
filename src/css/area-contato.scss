@@ -1,0 +1,32 @@
+@import 'mixin-variaveis';
+@import 'container-geral';
+
+.contato-icons {
+    position: fixed;
+    z-index: 999;
+    top: 30%;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+
+    figure {
+        img {
+            @include borderRadiusGlobal(10px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .contato-icons {
+        top: 50%;
+        width: 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contato-icons {
+        top: 30%;
+        width: 25px;
+    }
+}
