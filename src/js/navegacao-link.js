@@ -1,10 +1,10 @@
 "use strict";
 
 (() => {
-  const menuHeader = document.querySelectorAll('.menu-header a[href^="#"]');
-
+  const menuHeader = document.querySelectorAll('.menu-header a[href^="#"]')
+  
   menuHeader.forEach((item) => {
-    item.addEventListener("click", scrollClick);
+    item.addEventListener("click", scrollClick)
   });
 
   //A função abaixo vai identificar qual elemento foi clicado e faz a chamada da função getScroll
@@ -12,8 +12,11 @@
     event.preventDefault();
     const to = getScroll(event.target) - 80;
     scrollPosition(to);
-  }
 
+    
+
+  }
+ 
   //Afunção abaixo faz a suavização da navegação entre os links
   function scrollPosition(to) {
 
@@ -30,6 +33,31 @@
   //A função abaixo vai pegar o atributo dos links de navegação (e seus valores) e fazer a referência das sections e pega seus valores de scroll
   function getScroll(element) {
     const id = element.getAttribute("href");
+
+    if(id === '#sobre') {
+      document.querySelector('.sobre').classList.add('active')
+    } else {
+      document.querySelector('.sobre').classList.remove('active')
+    }
+
+    if(id === '#skills') {
+      document.querySelector('.skills').classList.add('active')
+    } else {
+      document.querySelector('.skills').classList.remove('active')
+    }
+
+    if(id === '#portifolio') {
+      document.querySelector('.portifolio').classList.add('active')
+    } else {
+      document.querySelector('.portifolio').classList.remove('active')
+    }
+
+    if(id === '#contato') {
+      document.querySelector('.contato').classList.add('active')
+    } else {
+      document.querySelector('.contato').classList.remove('active')
+    }
+
     return document.querySelector(id).offsetTop;
   }
 
