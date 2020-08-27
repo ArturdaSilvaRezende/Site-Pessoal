@@ -5,7 +5,7 @@ import '../css/mixin-variaveis.scss';
 import '../css/container-geral.scss';
 import '../css/header.scss';
 import '../css/main-content.scss';
-import '../css/portifolio.scss';
+import '../css/portfolio.scss';
 import '../css/area-contato.scss';
 
 //header image
@@ -31,10 +31,10 @@ import '../assets/git.png';
 import '../assets/java.png';
 
 //Portifólio
-import '../assets/portifolio-01.jpg';
-import '../assets/portifolio-02.jpg';
-import '../assets/portifolio-03.jpg';
-import '../assets/portifolio-04.jpg';
+import '../assets/portfolio-01.jpg';
+import '../assets/portfolio-02.jpg';
+import '../assets/portfolio-03.jpg';
+import '../assets/portfolio-04.jpg';
 
 //Contanto
 import '../assets/gmail.png';

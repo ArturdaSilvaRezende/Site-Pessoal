@@ -1,11 +1,11 @@
 @import 'mixin-variaveis';
 @import 'container-geral';
 
-.portifolio {
-    grid-area: portifolio;
+.portfolio {
+    grid-area: portfolio;
     background-color: rgba(0,0,0,0.8);
     padding: 3% 0 3% 0;
-   
+    
     .title {
         color: $light;
         text-align: center;
@@ -14,7 +14,7 @@
         margin-bottom: 20px;
     }
 
-    .portifolio-container {
+    .portfolio-container {
         display: flex;
         @extend %display-flex;
         @extend %jusfify-content;
@@ -25,7 +25,7 @@
         width: 960px;
         margin: 0 auto;
         
-        .portifolio-item {
+        .portfolio-item {
             position: relative;
             @include borderRadiusGlobal(15px);
             margin-bottom: 20px;
@@ -60,7 +60,7 @@
                     
                 }
 
-                .description-portifolio {
+                .description-portfolio {
                     background-color: rgba(0,0,0,0.9);
                     @include borderRadiusGlobal(15px);
                     height: 91%;
@@ -105,11 +105,11 @@
         .title {
             font-size: 1.5em;
         }
-        .portifolio-container {
+        .portfolio-container {
             width: 100%;
             flex-direction: column;
             
-        .portifolio-item {
+        .portfolio-item {
             
             figcaption {
                 flex-direction: column;
@@ -121,7 +121,7 @@
                     }
                 }
 
-                .description-portifolio {
+                .description-portfolio {
 
                     button {
                         top: 40px;

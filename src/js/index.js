@@ -10,7 +10,7 @@ import { menuNavegacao } from './menu_main'
 import { fullDataTime } from './full_data_time'
 import { tipeWrite } from './tipewrite'
 import { javaMessage } from './java_skill_control'
-import { portifolioContent } from './portifolio'
+import { portfolioContent } from './portfolio'
 import { navegacaoLinks } from './navegacao-link'
 
 

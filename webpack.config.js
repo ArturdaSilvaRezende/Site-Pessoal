@@ -48,7 +48,7 @@ module.exports = {
                 use: {
 					loader: 'file-loader', 
 					options: {
-                        name: '../css/icofont/fonts/[name]-[hash:8].[ext]'
+                        name: 'assets/icofont/fonts/[name]-[hash:8].[ext]'
                     }
                 }
 			}

@@ -4,7 +4,7 @@
     grid-template-areas: 
     "header header header"
     "main-content main-content main-content"
-    "portifolio portifolio portifolio"
+    "portfolio portfolio portfolio"
     "footer footer footer";
     gap: 30px;
     position: relative;
@@ -19,7 +19,7 @@
         grid-template-areas: 
         "header"
         "main-content"
-        "portifolio"
+        "portfolio"
         "footer";
     }
 }

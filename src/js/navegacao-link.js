@@ -10,11 +10,8 @@
   //A função abaixo vai identificar qual elemento foi clicado e faz a chamada da função getScroll
   function scrollClick(event) {
     event.preventDefault();
-    const to = getScroll(event.target) - 80;
+    const to = getScroll(event.target) - 106;
     scrollPosition(to);
-
-    
-
   }
  
   //Afunção abaixo faz a suavização da navegação entre os links
@@ -46,10 +43,10 @@
       document.querySelector('.skills').classList.remove('active')
     }
 
-    if(id === '#portifolio') {
-      document.querySelector('.portifolio').classList.add('active')
+    if(id === '#portfolio') {
+      document.querySelector('.portfolio').classList.add('active')
     } else {
-      document.querySelector('.portifolio').classList.remove('active')
+      document.querySelector('.portfolio').classList.remove('active')
     }
 
     if(id === '#contato') {
