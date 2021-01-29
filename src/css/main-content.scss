@@ -63,11 +63,12 @@
         margin-top: 400px;
 
         .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin: 20% auto 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             padding: 30px;
-
+            max-width: 1200px;
+            margin: 0 auto;
             .about-text {
                 width: 100%;
                 padding-right: 30px;
@@ -94,7 +95,8 @@
             .img-artur-rezende {
                 padding-top: 20px;
                 margin: 0 auto;
-                
+                width: 100%;
+
                 img {
                     width: 100%;
                     display: block;
@@ -112,32 +114,28 @@
         .about {
             
             .about-container {
-                grid-template-areas: "about-text" "img-artur-rezende";
-                grid-template-columns: 100%;
-
+                width: 100%;
+                flex-direction: column;
+              
                 .about-text {
-                    grid-area: img-artur-rezende;
-                    p {
-                       width: 100%;
-                       margin-left: 20px;
-                    }
+                    margin-left: 20px;
+                    order: 2;
                 }
 
                 .img-artur-rezende {
-                    grid-area: about-text;
+                    order: 1;
                     padding-bottom: 20px;
-                    max-width: 300px;
-                    margin: 0 auto;
+                    max-width: 320px;
+                    
+                    img {
+                        margin: 0 auto;
+
+                    }
                 }
             }
             
         }
 
-    }
-    @media screen and (min-width: 901px) and (max-width: 1200px) {
-        .about {
-            margin-top: 400px;
-        }
     }
 
     /* skills front end */
