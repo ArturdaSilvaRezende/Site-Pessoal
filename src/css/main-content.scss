@@ -63,11 +63,12 @@
         margin-top: 400px;
 
         .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin: 20% auto 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             padding: 30px;
-
+            max-width: 1200px;
+            margin: 0 auto;
             .about-text {
                 width: 100%;
                 padding-right: 30px;
@@ -94,7 +95,8 @@
             .img-artur-rezende {
                 padding-top: 20px;
                 margin: 0 auto;
-                
+                width: 100%;
+
                 img {
                     width: 100%;
                     display: block;
@@ -112,32 +114,28 @@
         .about {
             
             .about-container {
-                grid-template-areas: "about-text" "img-artur-rezende";
-                grid-template-columns: 100%;
-
+                width: 100%;
+                flex-direction: column;
+              
                 .about-text {
-                    grid-area: img-artur-rezende;
-                    p {
-                       width: 100%;
-                       margin-left: 20px;
-                    }
+                    margin-left: 20px;
+                    order: 2;
                 }
 
                 .img-artur-rezende {
-                    grid-area: about-text;
+                    order: 1;
                     padding-bottom: 20px;
-                    max-width: 300px;
-                    margin: 0 auto;
+                    max-width: 320px;
+                    
+                    img {
+                        margin: 0 auto;
+
+                    }
                 }
             }
             
         }
 
-    }
-    @media screen and (min-width: 901px) and (max-width: 1200px) {
-        .about {
-            margin-top: 400px;
-        }
     }
 
     /* skills front end */
@@ -179,7 +177,7 @@
             }
 
             .content-skill {
-                text-align: center;
+                
                 h1, p {
                     color: $light;
                     text-align: center;
@@ -189,43 +187,73 @@
                 button {
                     color: $light;
                     border: 1px solid $light;
-                    margin-top: 40px;
                     padding: 10px;
                     @include borderRadiusGlobal(20px);
                     transition: 1s ease;
-                   
+                    display: block;
+                    width: 90%;
+                    margin: 20px auto 0 auto;
+
                     &:hover {
                         color: $yellow;
                         border: 1px solid $yellow;
                     }
                 }
+
+                ul {
+                    margin-top: 6%;
+                    padding-left: 15px;
+                    li {
+                        color: $light;
+                        list-style-type: disc;
+                        padding-bottom: 12px;
+        
+                        span {
+                            color: $warning;
+                        }
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+
+                    }
+                }
+
             }
         }
 
-        .java-menssage {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #fff;
-            padding: 20px;
-            @include borderRadiusGlobal(20px);
-            width: 80%;
-            display: none;
+        .java-skill {
+            position: relative;
+            .java-menssage {
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                @include borderRadiusGlobal(20px);
+                width: 70vw;
+                display: none;
+                z-index: 999;
 
-             p {
-                 text-indent: 30px;
-                 color: $dark;
-                 font-weight: 700;
-                 text-align: justify;
-             }
-
-             button {
-                 position: absolute;
-                 top: 0;
-                 left: -20px;
-             }
+                 p {
+                     text-indent: 30px;
+                     color: $dark;
+                     font-weight: 700;
+                     text-align: justify;
+                 }
+    
+                 .close-java {
+                     position: absolute;
+                     top: -40px;
+                     left: -40px;
+                     width: 70px;
+                     border: none !important;
+                     background-color: transparent;
+                     outline: none;
+                 }
+            }
         }
+       
     }
 
     @media screen and (min-width: 901px) and (max-width: 1200px) {
@@ -267,8 +295,15 @@
                 }
             }
 
-            .java-menssage {
-                width: 80%;
+            .java-skill {
+                position: relative;
+                .java-menssage {
+                    position: absolute;
+                    left: 110%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80vw;
+                }
             }
         }
     }
@@ -299,10 +334,15 @@
                 }
             }
 
-            .java-menssage {
-                bottom: -14%;
-                width: 85%;
-                z-index: 999;
+            .java-skill {
+                position: relative;
+                .java-menssage {
+                    position: absolute;
+                    left: 50%;
+                    top: 200%;
+                    transform: translate(-50%, -50%);
+                    width: 85vw;
+                }
             }
         }
 

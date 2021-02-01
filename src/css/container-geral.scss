@@ -11,7 +11,7 @@
 
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .container-geral {
         grid-template-columns: 100%;
     }
