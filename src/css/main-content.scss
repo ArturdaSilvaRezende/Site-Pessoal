@@ -221,30 +221,39 @@
             }
         }
 
-        .java-menssage {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #fff;
-            padding: 20px;
-            @include borderRadiusGlobal(20px);
-            width: 80%;
-            display: none;
+        .java-skill {
+            position: relative;
+            .java-menssage {
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                @include borderRadiusGlobal(20px);
+                width: 70vw;
+                display: none;
+                z-index: 999;
 
-             p {
-                 text-indent: 30px;
-                 color: $dark;
-                 font-weight: 700;
-                 text-align: justify;
-             }
-
-             button {
-                 position: absolute;
-                 top: 0;
-                 left: -20px;
-             }
+                 p {
+                     text-indent: 30px;
+                     color: $dark;
+                     font-weight: 700;
+                     text-align: justify;
+                 }
+    
+                 .close-java {
+                     position: absolute;
+                     top: -40px;
+                     left: -40px;
+                     width: 70px;
+                     border: none !important;
+                     background-color: transparent;
+                     outline: none;
+                 }
+            }
         }
+       
     }
 
     @media screen and (min-width: 901px) and (max-width: 1200px) {
@@ -286,8 +295,15 @@
                 }
             }
 
-            .java-menssage {
-                width: 80%;
+            .java-skill {
+                position: relative;
+                .java-menssage {
+                    position: absolute;
+                    left: 110%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80vw;
+                }
             }
         }
     }
@@ -318,10 +334,15 @@
                 }
             }
 
-            .java-menssage {
-                bottom: -14%;
-                width: 85%;
-                z-index: 999;
+            .java-skill {
+                position: relative;
+                .java-menssage {
+                    position: absolute;
+                    left: 50%;
+                    top: 200%;
+                    transform: translate(-50%, -50%);
+                    width: 85vw;
+                }
             }
         }
 

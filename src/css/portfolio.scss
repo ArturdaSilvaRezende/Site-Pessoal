@@ -61,7 +61,7 @@
                 }
 
                 .description-portfolio {
-                    background-color: rgba(0,0,0,0.9);
+                    background-color: rgba(0,0,0,0.960);
                     @include borderRadiusGlobal(15px);
                     height: 91%;
                     position: absolute;
@@ -92,6 +92,7 @@
                     p {
                        position: relative;
                        top: 100px;
+                       line-height: 2;
                     }
                 }
             }
