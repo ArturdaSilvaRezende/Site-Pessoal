@@ -103,6 +103,18 @@
                 }
 
             }
+
+            .contato-item {
+                img {
+                    width: 40px;
+                }
+
+                figcaption {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
         }
 
     }
