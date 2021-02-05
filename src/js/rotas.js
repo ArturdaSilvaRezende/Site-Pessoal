@@ -15,7 +15,7 @@ import "../assets/open-menu.png"; //open menu
 import "../assets/close.png"; //close menu
 
 //About imgage
-import "../assets/artur-rezende.jpg"; //Artur img about
+import "../assets/artur-rezende.jpg"; //Artur about
 
 //Skills front end
 import "../assets/html5.png";
